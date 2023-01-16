@@ -135,40 +135,46 @@ textarea:focus {
 *:focus {
   outline: none;
 }
+#ftype {
+  border-radius: 10px;
+  position: relative;
+  margin-top: 3.5%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
 
 #ftype select {
   appearance: none;
   -webkit-appearance: none;
   border: 0;
   padding: 10px;
-  padding-top: 9px;
+  padding-left: 4px;
   margin: -5px -20px -5px -5px;
   color: #393e46;
   height: 40px;
-  background-color: #eeeeee;
-  opacity: 87%;
+  background-color: transparent;
 }
 
 #ftype select option {
   width: 40px;
-  margin-left: 10px;
+  height: 100%;
+  padding-top: 2px;
+  padding-bottom: 0;
+  margin-right: 10px;
   border-radius: 10px;
   display: inline-block;
   text-align: center;
+  background-color: #eeeeee;
+  opacity: 70%;
 }
 
 #ftype select :hover {
-  background-color: #eeeeee;
+  opacity: 100%;
 }
 
-#ftype {
-  border-radius: 10px;
-  position: relative;
-  margin-top: 4.5%;
-  display: inline-block;
-  vertical-align: top;
-  overflow: hidden;
-  height: 25px;
+#ftype select :checked {
+  opacity: 100%;
 }
 
 #targetlist {
