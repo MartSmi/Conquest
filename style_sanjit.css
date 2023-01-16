@@ -6,6 +6,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth !important;
 }
 
 .top_section {
@@ -142,14 +143,17 @@ input[type="submit"] {
   margin-right: auto;
 }
 
+#submit_login_wrapper{
+    display: flex;
+    width: 100%;
+    align-content: center;
+}
+
 #submit_button_login {
   font-family: Khula;
   margin: 5%;
-  transform: translateX(300%);
-}
-
-* {
-  scroll-behavior: smooth !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .scroll {
@@ -207,8 +211,15 @@ input[type="submit"] {
   margin: 2%;
   width: 90%;
   background-color: rgba(238, 238, 238, 1);
+  border-radius: 10px;
 }
 
-.goal h1 {
+.goals h1 {
   font-family: Khula;
+  color:rgba(238, 238, 238, 1) ;
+  margin-left: 2%;
 }
+
+.goal h2 {
+    font-family: Khula;
+  }
