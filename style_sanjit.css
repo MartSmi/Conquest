@@ -106,7 +106,7 @@ input[type="submit"] {
   border-radius: 20%;
   border: none;
   width: 15%;
-  transform: translate(325%, -20%);
+  /* transform: translate(325%, -20%); */
 }
 
 .gender {
@@ -129,10 +129,18 @@ input[type="submit"] {
   margin-top: 2%;
 }
 
+#submit_button_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 #submit_button_sign_up {
   font-family: Khula;
-  margin: 2.5%;
-  transform: translateX(315%);
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #submit_button_login {
@@ -181,22 +189,21 @@ input[type="submit"] {
   transform: translateY(50%);
 }
 
-
-.goals{
-    position: relative;
-    overflow: scroll;
-    margin: auto;
-    height: 65%;
-    padding: 3%;
-    background-color: rgb(28, 33, 40);
+.goals {
+  position: relative;
+  overflow: scroll;
+  margin: auto;
+  height: 65%;
+  padding: 3%;
+  background-color: rgb(28, 33, 40);
 }
 
-.goal{
-    position: relative;
-    padding: 2%;
-    margin: 2%;
-    width: 90%;
-    background-color: rgba(238, 238, 238, 1);
+.goal {
+  position: relative;
+  padding: 2%;
+  margin: 2%;
+  width: 90%;
+  background-color: rgba(238, 238, 238, 1);
 }
 
 .goal h1 {
