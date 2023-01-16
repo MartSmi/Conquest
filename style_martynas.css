@@ -13,21 +13,6 @@ body {
   font-family: Khula;
 }
 
-header {
-  display: flex;
-  height: 8vh;
-  top: 0;
-  background-color: #393e46;
-}
-
-#logo {
-  height: 6vh;
-  width: 6vh;
-  border-radius: 50%;
-  margin-top: 1vh;
-  margin-left: 1vh;
-}
-
 footer {
   height: 40px;
   bottom: 0;
