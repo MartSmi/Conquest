@@ -147,10 +147,9 @@ input[type="submit"] {
 
 .scroll {
   position: relative;
-  height: 8%;
+  height: 35%;
   border-radius: 50%;
   left: 80%;
-  bottom: -15px;
 }
 
 .goals {
