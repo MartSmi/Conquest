@@ -71,6 +71,7 @@ body{
     padding: 0 10%;
     margin-right: 10%;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .login_field{
@@ -116,8 +117,9 @@ input[type = "submit"]{
 
 .sign_in_link{
     position: relative;
-    transform: translate(45%, -20%);
+    
     width: 70%;
+    margin: auto;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -190,13 +192,14 @@ input[type = "submit"]{
     position: relative;
     overflow: scroll;
     margin: auto;
-    height: 100%;
+    height: 65%;
     padding: 3%;
     background-color: rgb(28, 33, 40);
 }
 
 .goal{
     position: relative;
+    padding: 2%;
     margin: 2%;
     width: 90%;
     background-color: rgba(238, 238, 238, 1);
