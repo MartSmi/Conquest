@@ -33,6 +33,18 @@ body {
   width: 100%;
   position: absolute;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  height: 40px;
+  bottom: 0;
+  background-color: #4ecca3;
+  opacity: 87%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {
@@ -137,10 +149,10 @@ input[type="submit"] {
   margin-right: auto;
 }
 
-#submit_login_wrapper{
-    display: flex;
-    width: 100%;
-    align-content: center;
+#submit_login_wrapper {
+  display: flex;
+  width: 100%;
+  align-content: center;
 }
 
 #submit_button_login {
@@ -152,49 +164,15 @@ input[type="submit"] {
 
 .scroll {
   position: relative;
-  height: 8%;
+  height: 35%;
   border-radius: 50%;
   left: 80%;
-  bottom: -15px;
-}
-
-.bottom_section {
-  margin: 0;
-  height: 7.5%;
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-  background-color: rgba(78, 204, 163, 1);
-  text-align: center;
-}
-
-.bottom_section h4 {
-  color: rgba(57, 62, 70, 1);
-  font-family: Khula;
-  transform: translateY(50%);
-}
-
-.bottom_section_goals {
-  margin: 0;
-  height: 7.5%;
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-  background-color: rgba(78, 204, 163, 1);
-  text-align: center;
-}
-
-.bottom_section_goals h4 {
-  color: rgba(57, 62, 70, 1);
-  font-family: Khula;
-  transform: translateY(50%);
 }
 
 .goals {
   position: relative;
   overflow: scroll;
   margin: auto;
-  height: 65%;
   padding: 3%;
   background-color: rgb(28, 33, 40);
 }
@@ -210,13 +188,13 @@ input[type="submit"] {
 
 .goals h1 {
   font-family: Khula;
-  color:rgba(238, 238, 238, 1) ;
+  color: rgba(238, 238, 238, 1);
   margin-left: 2%;
 }
 
 .goal h2 {
-    font-family: Khula;
-  }
+  font-family: Khula;
+}
 
   #main_title{
     font-family: Pacifico;
@@ -251,7 +229,5 @@ input[type="submit"] {
     border: none;
 }
 
-#outerform a{
-    display:;
-}
+
 
