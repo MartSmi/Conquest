@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_martynas.css" />
   </head>
   <body>
     <header>
-      <img src="" alt="" />
-      <h1>Conquest</h1>
+      <img id="logo" src="images/logo-color.png" />
     </header>
 
     <div id="outerform">
@@ -17,7 +16,7 @@
             type="text"
             id="fname"
             name="targetname"
-            value="Target name"
+            placeholder="Target name"
           /><br />
           <textarea
             id="fdesc"
@@ -25,9 +24,8 @@
             cols="40"
             rows="5"
             maxlength="200"
-          >
-Description</textarea
-          >
+            placeholder="Description (keep it SMART)"
+          ></textarea>
           <div id="ftype">
             <select name="targettype" size="4">
               <option selected>123</option>
@@ -37,7 +35,7 @@ Description</textarea
             </select>
           </div>
           <input type="date" id="fdate" name="date" />
-          <input id="fcreate" type="submit" value="Create" />
+          <input class="fcreate" type="submit" value="Create" />
         </div>
       </form>
     </div>
