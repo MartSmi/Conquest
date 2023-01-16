@@ -4,9 +4,9 @@
 }
 
 @font-face {
-    font-family: Pacifico;
-    src: url("fonts/Pacifico-Regular.ttf");
-  }
+  font-family: Pacifico;
+  src: url("fonts/Pacifico-Regular.ttf");
+}
 
 * {
   margin: 0;
@@ -24,7 +24,6 @@
   background-color: rgba(57, 62, 70, 1);
   text-align: center;
 }
-
 
 body {
   font-family: Khula;
@@ -196,38 +195,45 @@ input[type="submit"] {
   font-family: Khula;
 }
 
-  #main_title{
-    font-family: Pacifico;
-    font-size: 750%;
-    width: fit-content;
-    margin: auto;
-    color:rgba(238, 238, 238, 1) ;
-    padding: 5%;
-  }
-  
-.login_main{
-    margin: 9.5%;
-    text-align: center;
-    font-family: Khula;
-    font-size: larger;
-    height: 15%;
-    width: 30%;
-    border-radius: 40px;
-    background-color: rgba(78, 204, 163, 1);
-    border: none;
-}
-  
-.signUp_main{
-    margin: 9.5%;
-    text-align: center;
-    font-family: Khula;
-    font-size: larger;
-    height: 15%;
-    width: 30%;
-    border-radius: 40px;
-    background-color: rgba(78, 204, 163, 1);
-    border: none;
+#main_title {
+  font-family: Pacifico;
+  font-size: 750%;
+  margin: auto;
+  color: rgba(238, 238, 238, 1);
+  opacity: 90%;
 }
 
+.login_main {
+  text-align: center;
+  font-family: Khula;
+  font-size: larger;
+  border-radius: 40px;
+  background-color: rgba(78, 204, 163, 1);
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: none;
+}
 
+.signUp_main {
+  text-align: center;
+  font-family: Khula;
+  font-size: larger;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 40px;
+  background-color: rgba(78, 204, 163, 1);
+  border: none;
+}
 
+#mainform {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#mainform > a {
+  white-space: nowrap;
+}

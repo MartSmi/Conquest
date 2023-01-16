@@ -20,24 +20,32 @@
     </header>
 
     <div id="outerform">
-      <h2 id="formtitle">Create goal</h2>
+      <h2 id="formtitle">Create target</h2>
       <form action="">
         <div id="mainform">
           <input
             type="text"
             id="fname"
-            name="goalname"
-            placeholder="Goal name"
+            name="targetname"
+            placeholder="Target name"
           /><br />
           <textarea
             id="fdesc"
-            name="goaldesc"
+            name="targetdesc"
             cols="40"
             rows="5"
             maxlength="200"
             placeholder="Description (keep it SMART)"
           ></textarea>
-          <input type="date" id="fdate" name="goaldate" />
+          <div id="ftype">
+            <select name="targettype" size="4">
+              <option selected>123</option>
+              <option>+/-</option>
+              <option>$</option>
+              <option>Task</option>
+            </select>
+          </div>
+          <input type="date" id="fdate" name="date" />
           <input class="fcreate" type="submit" value="Create" />
         </div>
       </form>
