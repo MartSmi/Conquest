@@ -6,6 +6,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth !important;
 }
 
 .top_section {
@@ -138,10 +139,6 @@ input[type="submit"] {
   font-family: Khula;
   margin: 5%;
   transform: translateX(300%);
-}
-
-* {
-  scroll-behavior: smooth !important;
 }
 
 .scroll {
