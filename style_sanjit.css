@@ -3,6 +3,11 @@
   src: url(fonts/Khula-Regular.ttf);
 }
 
+@font-face {
+    font-family: Pacifico;
+    src: url("fonts/Pacifico-Regular.ttf");
+  }
+
 * {
   margin: 0;
   padding: 0;
@@ -20,17 +25,6 @@
   text-align: center;
 }
 
-#logo {
-  width: 12vh;
-  height: 12vh;
-  margin: auto;
-  position: relative;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 0;
-  left: 30px;
-  border-radius: 50%;
-}
 
 body {
   font-family: Khula;
@@ -103,7 +97,7 @@ body {
 input[type="submit"] {
   padding: 2%;
   background-color: rgba(78, 204, 163, 1);
-  border-radius: 20%;
+  border-radius: 20px;
   border: none;
   width: 15%;
   /* transform: translate(325%, -20%); */
@@ -223,3 +217,41 @@ input[type="submit"] {
 .goal h2 {
     font-family: Khula;
   }
+
+  #main_title{
+    font-family: Pacifico;
+    font-size: 750%;
+    width: fit-content;
+    margin: auto;
+    color:rgba(238, 238, 238, 1) ;
+    padding: 5%;
+  }
+  
+.login_main{
+    margin: 9.5%;
+    text-align: center;
+    font-family: Khula;
+    font-size: larger;
+    height: 15%;
+    width: 30%;
+    border-radius: 40px;
+    background-color: rgba(78, 204, 163, 1);
+    border: none;
+}
+  
+.signUp_main{
+    margin: 9.5%;
+    text-align: center;
+    font-family: Khula;
+    font-size: larger;
+    height: 15%;
+    width: 30%;
+    border-radius: 40px;
+    background-color: rgba(78, 204, 163, 1);
+    border: none;
+}
+
+#outerform a{
+    display:;
+}
+
