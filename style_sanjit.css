@@ -1,190 +1,187 @@
 @font-face {
-    font-family: Khula;
-    src: url(fonts/Khula-Regular.ttf);
+  font-family: Khula;
+  src: url(fonts/Khula-Regular.ttf);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.top_section{
-    display: flex;
-    margin: 0;
-    border: 2%;
-    position: relative;
-    width: 100%;
-    height: 18%;
-    background-color: rgba(57, 62, 70, 1);
-    text-align: center;
+.top_section {
+  display: flex;
+  margin: 0;
+  border: 2%;
+  position: relative;
+  width: 100%;
+  height: 18%;
+  background-color: rgba(57, 62, 70, 1);
+  text-align: center;
 }
 
-#logo{
-    width: 12vh;
-    height: 12vh;
-    margin: auto;
-    position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 0;
-    left: 30px;
-    border-radius: 50% ;
+#logo {
+  width: 12vh;
+  height: 12vh;
+  margin: auto;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0;
+  left: 30px;
+  border-radius: 50%;
 }
 
-body{
-    font-family: Khula;
-    background-color: rgb(28, 33, 40);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    overflow: scroll;
+body {
+  font-family: Khula;
+  background-color: rgb(28, 33, 40);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: scroll;
 }
 
-.center{
-    margin:auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: scroll;
-    background-color: rgba(238, 238, 238, 1);
-    height: 60%;
-    width: 50%;
-    top: 10%;
-    border-radius: 5%;
-    align-content: center;
+.center {
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  background-color: rgba(238, 238, 238, 1);
+  height: 60%;
+  width: 50%;
+  top: 10%;
+  border-radius: 5%;
+  align-content: center;
 }
 
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
 
-.center h1{
-    font-family: Khula;
-    color: rgba(57, 62, 70, 1);
-    text-align: center;
-    padding: 5% 5%;   
-    border-bottom: 1% solid rgba(57, 62, 70, 1);
+.center h1 {
+  font-family: Khula;
+  color: rgba(57, 62, 70, 1);
+  text-align: center;
+  padding: 5% 5%;
+  border-bottom: 1% solid rgba(57, 62, 70, 1);
 }
 
-.center form{
-    padding: 0 10%;
-    margin-right: 10%;
-    box-sizing: border-box;
-    text-align: center;
+.center form {
+  margin-left: 10%;
+  margin-right: 10%;
+  box-sizing: border-box;
 }
 
-.login_field{
-    position: relative;
-    border-bottom: 1% solid rgba(57, 62, 70, 1);
+.login_field {
+  display: flex;
+  position: relative;
+  border-bottom: 1% solid rgba(57, 62, 70, 1);
 }
 
-.login_field input{
-    font-family: Khula;
-    margin: 5%;
-    width: 100%;
-    padding: 2%;
-    font-size:80%;
-    background: none;
-    outline: rgba(57, 62, 70, 1);
+.login_field input {
+  font-family: Khula;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+  padding: 2%;
+  font-size: 80%;
+  background: none;
+  outline: rgba(57, 62, 70, 1);
 }
 
-.login_field label{
-    font-family: Khula;
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    color: rgb(126, 124, 124);
-    transform: translateY(-200%);
-    font-size: 100%;
+.login_field label {
+  font-family: Khula;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  color: rgb(126, 124, 124);
+  transform: translateY(-200%);
+  font-size: 100%;
 }
 
-input[type = "submit"]{
-    padding: 2%;
-    background-color: rgba(78, 204, 163, 1);
-    border-radius: 20%;
-    border: none;
-    width: 15%;
-    transform: translate(325%, -20%);
-    
+input[type="submit"] {
+  padding: 2%;
+  background-color: rgba(78, 204, 163, 1);
+  border-radius: 20%;
+  border: none;
+  width: 15%;
+  transform: translate(325%, -20%);
 }
 
-.gender{
-    padding: 2.5% 2.5% 5% 2.5%;
-    width: 100%;
-    transform: translateX(5%);
+.gender {
+  padding: 2.5% 2.5% 5% 2.5%;
+  width: 100%;
 }
 
-.sign_in_link{
-    position: relative;
-    
-    width: 70%;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
+.sign_in_link {
+  position: relative;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
 }
 
-.sign_up_link{
-    position: relative;
-    transform: translate(55%, -20%);
-    width: 70%;
-    margin-top: 2%;
+.sign_up_link {
+  position: relative;
+  transform: translate(55%, -20%);
+  width: 70%;
+  margin-top: 2%;
 }
 
-#submit_button_sign_up{
-    font-family: Khula;
-    margin: 2.5%;
-    transform: translateX(315%);
+#submit_button_sign_up {
+  font-family: Khula;
+  margin: 2.5%;
+  transform: translateX(315%);
 }
 
-#submit_button_login{
-    font-family: Khula;
-    margin: 5%;
-    transform: translateX(300%);
+#submit_button_login {
+  font-family: Khula;
+  margin: 5%;
+  transform: translateX(300%);
 }
 
-*{
-    scroll-behavior: smooth !important;
+* {
+  scroll-behavior: smooth !important;
 }
 
-.scroll{
-    position: relative;
-    height: 8%;
-    border-radius: 50%;
-    left: 80%;
-    bottom: -15px;
+.scroll {
+  position: relative;
+  height: 8%;
+  border-radius: 50%;
+  left: 80%;
+  bottom: -15px;
 }
 
-.bottom_section{
-    margin: 0;
-    height: 7.5%;
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    background-color: rgba(78, 204, 163, 1);
-    text-align: center;
+.bottom_section {
+  margin: 0;
+  height: 7.5%;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(78, 204, 163, 1);
+  text-align: center;
 }
 
-.bottom_section h4{
-    color: rgba(57, 62, 70, 1);
-    font-family: Khula;
-    transform: translateY(50%);
+.bottom_section h4 {
+  color: rgba(57, 62, 70, 1);
+  font-family: Khula;
+  transform: translateY(50%);
 }
 
-.bottom_section_goals{
-    margin: 0;
-    height: 7.5%;
-    width: 100%;
-    bottom: 0;
-    position: relative;
-    background-color: rgba(78, 204, 163, 1);
-    text-align: center;
+.bottom_section_goals {
+  margin: 0;
+  height: 7.5%;
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  background-color: rgba(78, 204, 163, 1);
+  text-align: center;
 }
 
-.bottom_section_goals h4{
-    color: rgba(57, 62, 70, 1);
-    font-family: Khula;
-    transform: translateY(50%);
+.bottom_section_goals h4 {
+  color: rgba(57, 62, 70, 1);
+  font-family: Khula;
+  transform: translateY(50%);
 }
 
 
@@ -205,6 +202,6 @@ input[type = "submit"]{
     background-color: rgba(238, 238, 238, 1);
 }
 
-.goal h1{
-    font-family: Khula;
+.goal h1 {
+  font-family: Khula;
 }
