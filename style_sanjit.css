@@ -3,44 +3,33 @@
     src: url(fonts/Khula-Regular.ttf);
 }
 
-@font-face {
-    font-family: PlayFair Display;
-    src: url(fonts/PlayfairDisplay-Regular.ttf);
-}
-
-@font-face {
-    font-family: Pacifico;
-    src: url(fonts/Pacifico-Regular.ttf);
-}
-
 *{
     margin: 0;
     padding: 0;
+
 }
 
 .top_section{
+    display: flex;
     margin: 0;
     border: 2%;
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 18%;
     background-color: rgba(57, 62, 70, 1);
     text-align: center;
 }
 
-.top_section h1{
-    font-family: Pacifico;
-    font-size: 400%;
-    position: relative;
-    color: rgba(238, 238, 238, 1);  
-}
-
 #logo{
-    height: 70%;
-    width: 7.5%;
-    position: absolute;
-    transform: translate(-600%,20%);
-    border-radius: 50%  ;
+    width: 12vh;
+    height: 12vh;
+    margin: auto;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    left: 30px;
+    border-radius: 50% ;
 }
 
 body{
@@ -49,23 +38,19 @@ body{
     height: 100%;
     width: 100%;
     position: absolute;
-    overflow: hidden;
-
+    overflow: scroll;
 }
 
 .center{
-    
-    margin: 0;
+    margin:auto;
     position: relative;
     display: flex;
     flex-direction: column;
     overflow: scroll;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
     background-color: rgba(238, 238, 238, 1);
-    height: 400px;
-    width: 550px;
+    height: 60%;
+    width: 50%;
+    top: 10%;
     border-radius: 5%;
     align-content: center;
 }
@@ -74,12 +59,11 @@ body{
     display: none;
 }
 
-
 .center h1{
-    font-family: PlayFair Display;
+    font-family: Khula;
     color: rgba(57, 62, 70, 1);
     text-align: center;
-    padding: 5% 5%;
+    padding: 5% 5%;   
     border-bottom: 1% solid rgba(57, 62, 70, 1);
 }
 
@@ -119,16 +103,54 @@ input[type = "submit"]{
     background-color: rgba(78, 204, 163, 1);
     border-radius: 20%;
     border: none;
-    width: 10%;
+    width: 15%;
+    transform: translate(325%, -20%);
     
 }
-.sign_up_link{
-    position: relative;
-    transform: translate(35%, 50%);
+
+.gender{
+    padding: 2.5% 2.5% 5% 2.5%;
+    width: 100%;
+    transform: translateX(5%);
 }
 
-#submit_button{
-    font-family: PlayFair Display;
+.sign_in_link{
+    position: relative;
+    transform: translate(45%, -20%);
+    width: 70%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.sign_up_link{
+    position: relative;
+    transform: translate(55%, -20%);
+    width: 70%;
+    margin-top: 2%;
+}
+
+#submit_button_sign_up{
+    font-family: Khula;
+    margin: 2.5%;
+    transform: translateX(315%);
+}
+
+#submit_button_login{
+    font-family: Khula;
+    margin: 5%;
+    transform: translateX(300%);
+}
+
+*{
+    scroll-behavior: smooth !important;
+}
+
+.scroll{
+    position: relative;
+    height: 8%;
+    border-radius: 50%;
+    left: 80%;
+    bottom: -15px;
 }
 
 .bottom_section{
@@ -143,6 +165,43 @@ input[type = "submit"]{
 
 .bottom_section h4{
     color: rgba(57, 62, 70, 1);
-    font-family: PlayFair Display;
+    font-family: Khula;
     transform: translateY(50%);
+}
+
+.bottom_section_goals{
+    margin: 0;
+    height: 7.5%;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    background-color: rgba(78, 204, 163, 1);
+    text-align: center;
+}
+
+.bottom_section_goals h4{
+    color: rgba(57, 62, 70, 1);
+    font-family: Khula;
+    transform: translateY(50%);
+}
+
+
+.goals{
+    position: relative;
+    overflow: scroll;
+    margin: auto;
+    height: 100%;
+    padding: 3%;
+    background-color: rgb(28, 33, 40);
+}
+
+.goal{
+    position: relative;
+    margin: 2%;
+    width: 90%;
+    background-color: rgba(238, 238, 238, 1);
+}
+
+.goal h1{
+    font-family: Khula;
 }

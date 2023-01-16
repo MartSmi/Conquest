@@ -4,17 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in Page</title>
-    <link rel="stylesheet" href="sign_up_style.css" />
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style_sanjit.css" />
   </head>
   <body>
     <div class="top_section">
       <img id="logo" src="images/logo-color.png" />
-      <h1>Conquest</h1>
     </div>
-    <div class="center" >
+    <div class="center">
       <h1>Welcome!</h1>
-      <iv>
+      <form>
         <div class="login_field">
           <input type="text" required />
           <label>Name</label>
@@ -33,7 +32,7 @@
         </div>
         <div class="login_field">
           <input type="text" required />
-          <label><address></address></label>
+          <label>Address</label>
         </div>
         <div class="login_field">
           <input type="text" required />
@@ -43,30 +42,33 @@
           <input type="text" required />
           <label>Zip Code</label>
         </div>
-        <div required>
-            <input type="radio" name="Sex" value="Male" />
-            <label>Male</label>
-            <input type="radio" name="Sex" value="Female" />
-            <label>Female</label>
-            <input type="radio" name="Sex" value="Other" />
-            <label>Other</label>
-            <input type="radio" name="Sex" value="Do not wish to share" />
-            <label>Do not wish to share </label>
+        <div class="gender" required>
+          <input type="radio" name="Sex" value="Male" />
+          <label>Male</label>
+          <input type="radio" name="Sex" value="Female" />
+          <label>Female</label>
+          <input type="radio" name="Sex" value="Other" />
+          <label>Other</label>
+          <input type="radio" name="Sex" value="Do not wish to share" />
+          <label>Do not wish to share </label>
         </div>
         <div class="login_field">
-            <input type="text" required />
-            <label>Language</label>
-          </div>
-          <div class="login_field">
-            <input type="text" required />
-            <label>Describe yourself in a sentence</label>
-          </div>
-        <input id="submit_button" type="submit" value="Login" />
-        <div class="sign_up_link">
-          New here? <a href="sign_in.html">Login</a>
+          <input type="text" required />
+          <label>Language</label>
+        </div>
+        <div class="login_field">
+          <input type="text" required />
+          <label>Describe yourself in a sentence</label>
+        </div>
+        <input id="submit_button_sign_up" type="submit" value="Login" />
+        <div class="sign_in_link">
+          Already have an account? <a href="sign_in.html">Login</a>
         </div>
       </form>
     </div>
+    <a href="#submit_button_sign_up"
+      ><img class="scroll" src="images/scroll.png"
+    /></a>
     <div class="bottom_section"><h4>© Copyright | Web Uni🦄™</h4></div>
   </body>
 </html>
