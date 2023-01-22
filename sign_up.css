@@ -173,3 +173,7 @@ input[type="submit"] {
 .validationtext {
   font-size: smaller;
 }
+
+#sexfield > select {
+  outline: none;
+}

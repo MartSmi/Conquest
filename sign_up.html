@@ -25,17 +25,17 @@
     </header>
     <div id="sign_up_center" class="center">
       <h1 id="formtitle">Welcome!</h1>
-      <form>
+      <form onsubmit="return false;">
         <div class="formrow" id="nameemail">
           <div class="inputwrapper">
             <div class="formfield">
               <label>Name</label>
-              <input id="name" type="text" required />
+              <input id="name" required />
               <p class="validationtext" id="nameValidation"><br /></p>
             </div>
             <div class="formfield">
               <label>Email</label>
-              <input id="email" type="email" required />
+              <input id="email" />
               <p class="validationtext" id="emailValidation"><br /></p>
             </div>
           </div>
@@ -44,12 +44,12 @@
           <div class="inputwrapper">
             <div class="formfield">
               <label>Username</label>
-              <input id="username" type="text" required />
+              <input id="username" />
               <p class="validationtext" id="usernameValidation"><br /></p>
             </div>
             <div class="formfield">
               <label>Password</label>
-              <input id="password" type="password" required />
+              <input id="password" />
               <p class="validationtext" id="passwordValidation"><br /></p>
             </div>
           </div>
@@ -58,12 +58,12 @@
           <div class="inputwrapper" id="addresszip">
             <div class="formfield">
               <label>Language</label>
-              <input class="requiredField" type="text" required />
+              <input class="requiredField" />
               <p class="validationtext" id="languageValidation"><br /></p>
             </div>
             <div class="formfield">
               <label>Country</label>
-              <input class="requirdField" type="text" required />
+              <input class="requirdField" />
               <p class="validationtext" id="countryValidation"><br /></p>
             </div>
           </div>
@@ -72,23 +72,23 @@
           <div class="inputwrapper" id="addresszip">
             <div class="formfield optionalfield" id="addressfield">
               <label>Address</label>
-              <input type="text" />
+              <input />
             </div>
             <div class="formfield" id="zipfield">
               <label>Zip Code</label>
-              <input type="text" required />
+              <input />
               <p class="validationtext" id="zipValidation"><br /></p>
             </div>
           </div>
         </div>
         <div class="formrow">
-          <div class="gender" required>
-            <label>Male</label>
-            <input type="radio" name="Sex" value="Male" />
-            <label>Female</label>
-            <input type="radio" name="Sex" value="Female" />
-            <label>Other</label>
-            <input type="radio" name="Sex" value="Other" />
+          <div class="formfield" id="sexfield">
+            <label>Sex<br /></label>
+            <select>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
           </div>
         </div>
         <div class="formrow">
