@@ -72,11 +72,11 @@
           <div class="inputwrapper" id="addresszip">
             <div class="formfield optionalfield" id="addressfield">
               <label>Address</label>
-              <input />
+              <input id="address" />
             </div>
             <div class="formfield" id="zipfield">
               <label>Zip Code</label>
-              <input />
+              <input id="zip" />
               <p class="validationtext" id="zipValidation"><br /></p>
             </div>
           </div>
@@ -84,17 +84,17 @@
         <div class="formrow">
           <div class="formfield" id="sexfield">
             <label>Sex<br /></label>
-            <select>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
+            <select id="sex">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
             </select>
           </div>
         </div>
         <div class="formrow">
           <div class="formfield optionalfield">
             <label>Describe yourself in a sentence</label>
-            <input type="text" />
+            <input id="description" type="text" />
           </div>
         </div>
         <div class="formrow">
@@ -103,7 +103,10 @@
               id="submit_button_sign_up"
               type="submit"
               value="Sign Up"
-              onclick="usernameCheck(); passwordCheck(); nameCheck(); countryCheck(); languageCheck();"
+              onclick="clearAlert(); usernameCheck(); passwordCheck(); 
+              nameCheck(); countryCheck(); languageCheck(); emailCheck(); 
+              zipCheck(); getAddress(); getSex(); getDescription();
+              displayAlertMessage();"
             />
           </div>
         </div>
