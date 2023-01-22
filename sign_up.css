@@ -110,9 +110,11 @@ input[type="submit"] {
   font-size: 80%;
   background: none;
   outline: rgba(57, 62, 70, 1);
+  border-style: solid;
 }
 
-.formfield label {
+.formfield > label,
+.formfield > span {
   color: rgb(126, 124, 124);
 }
 
@@ -148,4 +150,12 @@ input[type="submit"] {
 .optionalfield > label::after {
   content: " - Optional";
   font-style: italic;
+}
+
+.correctfield > input {
+  border-color: green;
+}
+
+.incorrectfield > input {
+  border-color: red;
 }
