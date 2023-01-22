@@ -12,6 +12,9 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth !important;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .top_section {
