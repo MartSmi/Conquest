@@ -10,28 +10,25 @@ function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
 }
 
 function usernameCheck() {
-  let usernameInput = document.getElementById("username").value;
-  let returnText;
-  if (usernameInput.length < 5 || usernameInput.length > 12) {
-    returnText = "Not Valid. Username must be 5-12 characters long!";
+  let usernameInput = document.getElementById("username");
+  let username = usernameInput.value;
+  if (username.length < 5 || username.length > 12) {
+    updateFieldStatus(usernameInput, false, "Not Valid. Username must be 5-12 characters long!");
   } else {
-    returnText = "";
+    updateFieldStatus(usernameInput, true);
   }
-  document.getElementById("usernameValidation").innerHTML = returnText;
 }
 
 function passwordCheck() {
-  let passwordInput = document.getElementById("password").value;
-  let returnText;
-  if (passwordInput.length < 12) {
-    returnText = "Password must be at least 12 characters long!";
-  } else if (passwordInput.length < 14) {
-    returnText = "Recommended to be more than 14 characters!";
+  let passwordInput = document.getElementById("password");
+  let password = passwordInput.value;
+  if (password.length < 12) {
+    updateFieldStatus(passwordInput, false, "Password must be at least 12 characters long!");
+  } else if (password.length < 14) {
+    updateFieldStatus(passwordInput, true, "Recommended to be more than 14 characters!");
   } else {
-    returnText = "";
+    updateFieldStatus(passwordInput, true);
   }
-
-  document.getElementById("passwordValidation").innerHTML = returnText;
 }
 
 function nameCheck() {
@@ -44,6 +41,7 @@ function nameCheck() {
   } else {
     updateFieldStatus(nameInputElement, true);
   }
+  
 }
 
 function requiredFieldCheck() {
