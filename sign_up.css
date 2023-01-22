@@ -114,7 +114,7 @@ input[type="submit"] {
 }
 
 .formfield > label,
-.formfield > span {
+.formfield > p {
   color: rgb(126, 124, 124);
 }
 
@@ -158,4 +158,16 @@ input[type="submit"] {
 
 .incorrectfield > input {
   border-color: red;
+}
+
+.correctfield > .validationtext {
+  color: green;
+}
+
+.incorrectfield > .validationtext {
+  color: red;
+}
+
+.validationtext {
+  font-size: smaller;
 }

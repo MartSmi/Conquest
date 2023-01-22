@@ -30,12 +30,12 @@
           <div class="inputwrapper">
             <div class="formfield">
               <label>Name</label>
-              <input type="text" required />
-              <span>Enter name!</span>
+              <input id="name" type="text" required />
+              <p class="validationtext" id="nameValidation">Enter name</p>
             </div>
             <div class="formfield">
               <label>Email</label>
-              <input type="email" required />
+              <input id="email" type="email" required />
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@
               type="submit"
               value="Sign Up"
               onclick="
-              usernameCheck(); passwordCheck(); requiredFieldCheck();"
+              usernameCheck(); passwordCheck(); nameCheck(); requiredFieldCheck();"
             />
           </div>
         </div>
