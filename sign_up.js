@@ -10,24 +10,24 @@ function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
 }
 
 function usernameCheck() {
-  let usernameInput = document.getElementById("username");
+  let usernameInputElement = document.getElementById("username");
   let username = usernameInput.value;
   if (username.length < 5 || username.length > 12) {
-    updateFieldStatus(usernameInput, false, "Not Valid. Username must be 5-12 characters long!");
+    updateFieldStatus(usernameInputElement, false, "Must be 5-12 characters long!");
   } else {
-    updateFieldStatus(usernameInput, true);
+    updateFieldStatus(usernameInputElement, true);
   }
 }
 
 function passwordCheck() {
-  let passwordInput = document.getElementById("password");
+  let passwordInputElement = document.getElementById("password");
   let password = passwordInput.value;
   if (password.length < 12) {
-    updateFieldStatus(passwordInput, false, "Password must be at least 12 characters long!");
+    updateFieldStatus(passwordInputElement, false, "Must have at least 12 characters!");
   } else if (password.length < 14) {
-    updateFieldStatus(passwordInput, true, "Recommended to be more than 14 characters!");
+    updateFieldStatus(passwordInputElement, true, "Recommended to be more than 14 characters!");
   } else {
-    updateFieldStatus(passwordInput, true);
+    updateFieldStatus(passwordInputElement, true);
   }
 }
 
@@ -44,17 +44,24 @@ function nameCheck() {
   
 }
 
-function requiredFieldCheck() {
-  let requiredInputs = document.getElementsByClassName("requiredField");
-  let returnText;
-  for (let i = 0; i < requiredInputs.length; i++) {
-    if (requiredInputs[i].length < 5) {
-      returnText = "Required field!";
-    } else {
-      returnText = "";
+function languageCheck() {
+    let languageInputElement = document.getElementById("language");
+    let language = languageInputElement.value;
+    if(language.length < 1){
+        updateFieldStatus(languageInputElement, false, "Provide your language");
     }
-    console.log("hello");
-    document.getElementsByClassName("requiredValidation")[i].innerHTML =
-      returnText;
-  }
+    else{
+        updateFieldStatus(languageInputElement, true);
+    }
+}
+
+function countryCheck() {
+    let countryInputElement = document.getElementById("country");
+    let country = countryInputElement.value;
+    if(country.length < 1){
+        updateFieldStatus(countryInputElement, false, "Provide your country");
+    }
+    else{
+        updateFieldStatus(countryInputElement, true);
+    }
 }
