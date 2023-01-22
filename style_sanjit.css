@@ -62,8 +62,8 @@ footer {
   align-content: center;
 }
 
-#sign_up_center{
-    top: 15%;
+#sign_up_center {
+  top: 10%;
 }
 
 ::-webkit-scrollbar {
@@ -74,7 +74,6 @@ footer {
   font-family: Khula;
   color: rgba(57, 62, 70, 1);
   text-align: center;
-  padding: 5% 5%;
   border-bottom: 1% solid rgba(57, 62, 70, 1);
 }
 
