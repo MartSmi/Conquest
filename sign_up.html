@@ -56,7 +56,8 @@
         <div class="formrow">
           <div class="formfield">
             <label>Country</label>
-            <input type="text" required />
+            <input class="requirdField" type="text" required />
+            <p class="requiredValidation"></p>
           </div>
         </div>
         <div class="formrow">
@@ -84,7 +85,8 @@
         <div class="formrow">
           <div class="formfield">
             <label>Language</label>
-            <input type="text" required />
+            <input class="requiredField" type="text" required />
+            <p class="requiredValidation"></p>
           </div>
         </div>
         <div class="formrow">
@@ -99,7 +101,8 @@
               id="submit_button_sign_up"
               type="submit"
               value="Sign Up"
-              onclick="usernameCheck();  passwordCheck(); nameCheck();"
+              onclick="
+              usernameCheck(); passwordCheck(); nameCheck(); requiredFieldCheck();"
             />
           </div>
         </div>
