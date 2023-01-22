@@ -48,7 +48,8 @@
             </div>
             <div class="formfield">
               <label>Password</label>
-              <input type="password" required />
+              <input id="password" type="password" required />
+              <p id="passwordValidation"></p>
             </div>
           </div>
         </div>
@@ -98,7 +99,7 @@
               id="submit_button_sign_up"
               type="submit"
               value="Sign Up"
-              onclick="usernameCheck();"
+              onclick="usernameCheck();  passwordCheck();"
             />
           </div>
         </div>
