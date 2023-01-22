@@ -71,7 +71,9 @@ input[type="submit"] {
 }
 
 .gender {
-  padding: 2.5% 2.5% 5% 2.5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 5%;
   width: 100%;
 }
 

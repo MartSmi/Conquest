@@ -36,6 +36,7 @@
             <div class="formfield">
               <label>Email</label>
               <input id="email" type="email" required />
+              <p class="validationtext" id="emailValidation"><br /></p>
             </div>
           </div>
         </div>
@@ -44,20 +45,27 @@
             <div class="formfield">
               <label>Username</label>
               <input id="username" type="text" required />
-              <p id="usernameValidation"></p>
+              <p class="validationtext" id="usernameValidation"><br /></p>
             </div>
             <div class="formfield">
               <label>Password</label>
               <input id="password" type="password" required />
-              <p id="passwordValidation"></p>
+              <p class="validationtext" id="passwordValidation"><br /></p>
             </div>
           </div>
         </div>
         <div class="formrow">
-          <div class="formfield">
-            <label>Country</label>
-            <input class="requirdField" type="text" required />
-            <p class="requiredValidation"></p>
+          <div class="inputwrapper" id="addresszip">
+            <div class="formfield">
+              <label>Language</label>
+              <input class="requiredField" type="text" required />
+              <p class="validationtext" id="languageValidation"><br /></p>
+            </div>
+            <div class="formfield">
+              <label>Country</label>
+              <input class="requirdField" type="text" required />
+              <p class="validationtext" id="countryValidation"><br /></p>
+            </div>
           </div>
         </div>
         <div class="formrow">
@@ -69,6 +77,7 @@
             <div class="formfield" id="zipfield">
               <label>Zip Code</label>
               <input type="text" required />
+              <p class="validationtext" id="zipValidation"><br /></p>
             </div>
           </div>
         </div>
@@ -80,13 +89,6 @@
             <input type="radio" name="Sex" value="Female" />
             <label>Other</label>
             <input type="radio" name="Sex" value="Other" />
-          </div>
-        </div>
-        <div class="formrow">
-          <div class="formfield">
-            <label>Language</label>
-            <input class="requiredField" type="text" required />
-            <p class="requiredValidation"></p>
           </div>
         </div>
         <div class="formrow">
