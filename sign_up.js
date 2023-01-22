@@ -1,3 +1,10 @@
+function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
+    inputField.parentElement.classList.add(
+      isCorrect ? "correctfield" : "incorrectfield"
+    );
+    inputField.nextElementSibling.innerHTML = status;
+  }
+
 function usernameCheck() {
   let usernameInput = document.getElementById("username").value;
   let returnText;
@@ -33,14 +40,6 @@ function nameCheck() {
   }
 }
 
-function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
-  inputField.parentElement.classList.add(
-    isCorrect ? "correctfield" : "incorrectfield"
-  );
-  inputField.nextElementSibling.innerHTML = status;
-}
-
-
 function requiredFieldCheck(){
     let requiredInputs = document.getElementsByClassName("requiredField");
     let returnText;
@@ -52,6 +51,6 @@ function requiredFieldCheck(){
             returnText = "";
         }
         console.log("hello");
-        document.getElementsByClassName("requiredValidation").innerHTML = returnText;
+        document.getElementsByClassName("requiredValidation")[i].innerHTML = returnText;
     }
 }
