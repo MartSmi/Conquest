@@ -43,7 +43,8 @@
           <div class="inputwrapper">
             <div class="formfield">
               <label>Username</label>
-              <input type="text" required />
+              <input id="username" type="text" required />
+              <p id="usernameValidation"></p>
             </div>
             <div class="formfield">
               <label>Password</label>
@@ -97,7 +98,7 @@
               id="submit_button_sign_up"
               type="submit"
               value="Sign Up"
-              onclick="usernameCheck()"
+              onclick="usernameCheck();"
             />
           </div>
         </div>
