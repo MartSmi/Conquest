@@ -58,12 +58,12 @@
           <div class="inputwrapper" id="addresszip">
             <div class="formfield">
               <label>Language</label>
-              <input class="requiredField" />
+              <input id="language" type="text" required />
               <p class="validationtext" id="languageValidation"><br /></p>
             </div>
             <div class="formfield">
               <label>Country</label>
-              <input class="requirdField" />
+              <input id="country" type="text" required />
               <p class="validationtext" id="countryValidation"><br /></p>
             </div>
           </div>
@@ -103,8 +103,7 @@
               id="submit_button_sign_up"
               type="submit"
               value="Sign Up"
-              onclick="
-              usernameCheck(); passwordCheck(); nameCheck();"
+              onclick="usernameCheck(); passwordCheck(); nameCheck(); countryCheck(); languageCheck();"
             />
           </div>
         </div>
