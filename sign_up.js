@@ -19,9 +19,6 @@ function onSubmit() {
   emailCheck();
   zipCheck();
   sexCheck();
-  getAddress();
-  getSex();
-  getDescription();
   displayAlertMessage();
 }
 
@@ -197,18 +194,6 @@ function sexCheck() {
   }
 }
 
-function getAddress() {
-  var address = document.getElementById("address").value;
-}
-
-function getDescription() {
-  var description = document.getElementById("description").value;
-}
-
-function getSex() {
-  var sex = document.getElementById("sex").value;
-}
-
 function clearAlert() {
   console.log(alertStatus);
   if (!alertStatus.includes(false)) {
@@ -251,6 +236,6 @@ function displayAlertMessage() {
         "Description: " +
         form.desc
     );
-    toggleHiddenDiv();
+    showBehavioralInfo();
   }
 }

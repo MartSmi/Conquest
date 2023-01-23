@@ -1,12 +1,15 @@
-function toggleHiddenDiv() {
-  var hiddenDiv = document.getElementById("trackingInfo");
-  hiddenDiv.classList.remove("hideTrackingInfo");
+// Populates the div with behavioral tracking info
+// and makes it visible
+function showBehavioralInfo() {
   displayClicks();
-  timeSpentTracker();
+  displayTimeSpent();
   displayKeyPresses();
   displayTotalCharacters();
+  var hiddenDiv = document.getElementById("trackingInfo");
+  hiddenDiv.classList.remove("hideTrackingInfo");
 }
 
+//Increments the variable 'clicks' everytime the user clicks
 var clicks = 0;
 document.addEventListener("click", () => {
   clicks++;
@@ -18,12 +21,13 @@ function displayClicks() {
 }
 
 var startTime;
+//Clocks in the time the opens the page
 window.addEventListener("load", () => {
   startTime = new Date().getTime();
   console.log(startTime);
 });
 
-function timeSpentTracker() {
+function displayTimeSpent() {
   var currentTime = new Date().getTime();
   var timeSpent = currentTime - startTime;
   var minutes = timeSpent / 60000;
@@ -43,9 +47,11 @@ function displayKeyPresses() {
 
 function displayTotalCharacters() {
   let totalCharsTyped = 0;
+  //The form object has all the inputs as attributes and we
+  // traverse through each one to get the corresponding input length
   for (const [key, value] of Object.entries(form))
     if (key != "sex") totalCharsTyped += value.length;
 
   document.getElementById("info").innerHTML +=
-    "A total number of characters typed: " + totalCharsTyped + "<br/>";
+    "Total number of characters typed: " + totalCharsTyped + "<br/>";
 }

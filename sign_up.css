@@ -208,12 +208,12 @@ input[type="submit"] {
   position: absolute;
   right: 0;
   bottom: 50%;
-  height: 30%;
-  width: 20%;
-  background-color: rgba(238, 238, 238, 1);
+  background-color: #4ecca3;
   border-radius: 20px;
-  text-align: center;
+  text-align: left;
   align-items: center;
+  padding: 10px;
+  z-index: 1;
 }
 
 .hideTrackingInfo {
