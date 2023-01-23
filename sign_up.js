@@ -18,7 +18,7 @@ function onSubmit() {
   id = "sex";
 }
 
-var alertStatus = [false, false, false, false, false, false, false];
+var alertStatus = [false, false, false, false, false, false, false, false];
 /*
 var nameOfUser;
 var username;
@@ -131,8 +131,8 @@ function emailCheck() {
   var email = emailInputElement.value;
   if (email.length === 0) {
     updateFieldStatus(emailInputElement, false, "Provide your email");
-  } else if (!email.includes("@")) {
-    updateFieldStatus(emailInputElement, false, "Must contain @");
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    updateFieldStatus(emailInputElement, false, "Incorrect email");
     alertStatus[5] = false;
   } else {
     updateFieldStatus(emailInputElement, true);
@@ -164,8 +164,10 @@ function sexCheck() {
   let selectedValue = sexSelectElement.value;
   if (selectedValue === "default") {
     updateFieldStatus(sexSelectElement, false, "Select sex");
+    alertStatus[7] = true;
   } else {
     updateFieldStatus(sexSelectElement, true);
+    alertStatus[7] = true;
   }
 }
 
