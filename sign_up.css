@@ -200,3 +200,26 @@ input[type="submit"] {
 #passwordfield {
   flex: 3 0 0;
 }
+
+#trackingInfo{
+  position: absolute; 
+  /* Not sure how to bring it in front of the center div when you shrink the page*/
+  right:0;
+  bottom: 50%;
+  height: 30%;
+  width: 20%;
+  background-color: rgba(238, 238, 238, 1);
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+#viewTrackingInfo{
+  position: absolute;
+  right: 0;
+  bottom: 0;   
+}
+
+.hideTrackingInfo{
+  display: none;
+}

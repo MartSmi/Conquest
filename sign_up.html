@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="sign_up.css" />
     <link rel="stylesheet" href="header.css" />
     <script src="sign_up.js"></script>
+    <script src="tracking.js"></script>
   </head>
 
   <body>
+    <div id="trackingInfo"><p id="info"></p></div>
     <header>
       <img id="logo" src="images/logo-color.png" />
       <div id="links">
@@ -45,7 +47,7 @@
           <div class="inputwrapper">
             <div class="formfield" id="sexfield">
               <label>Sex<br /></label>
-              <select>
+              <select id="sex">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
@@ -82,11 +84,11 @@
           <div class="inputwrapper" id="addresszip">
             <div class="formfield optionalfield" id="addressfield">
               <label>Address</label>
-              <input />
+              <input id="address" />
             </div>
             <div class="formfield" id="zipfield">
               <label>Zip Code</label>
-              <input />
+              <input id="zip" />
               <p class="validationtext" id="zipValidation"><br /></p>
             </div>
           </div>
@@ -94,7 +96,7 @@
         <div class="formrow">
           <div class="formfield optionalfield">
             <label>Describe yourself in a sentence</label>
-            <input type="text" />
+            <input id="description" type="text" />
           </div>
         </div>
         <div class="formrow">
@@ -113,5 +115,8 @@
       </form>
     </div>
     <footer>©Copyright | Web Uni🦄™</footer>
+    <button id="viewTrackingInfo" onclick="toggleHiddenDiv();">
+      Tracking Data
+    </button>
   </body>
 </html>
