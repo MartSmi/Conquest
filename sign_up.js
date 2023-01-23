@@ -93,7 +93,7 @@ function nameCheck() {
   if (name.length === 0) {
     updateFieldStatus(nameInputElement, false, "Provide your name");
     alertStatus[2] = false;
-  } else if (!/^[a-z\s]+$/i.test(name)) {
+  } else if (!/^[A-z\s]+$/.test(name)) {
     updateFieldStatus(nameInputElement, false, "Can only contain letters");
     alertStatus[2] = false;
   } else {
