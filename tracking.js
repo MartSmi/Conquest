@@ -34,16 +34,8 @@ function timeSpentTracker() {
     Math.floor(seconds) +
     " seconds<br/>";
 }
-/*
-var totalKeyPresses = 0;
-window.addEventListener('load', () =>{
-    document.getElementById("name").addEventListener('keypress', () =>{
-        totalKeyPresses++;
-    })
-})
-*/
+
 function displayKeyPresses(){
     document.getElementById("info").innerHTML += 
     "Total key presses: " + totalKeyPresses + "<br/>";
 }
-
