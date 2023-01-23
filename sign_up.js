@@ -223,5 +223,6 @@ function displayAlertMessage() {
         "Description: " +
         description.value
     );
+    toggleHiddenDiv();
   }
 }

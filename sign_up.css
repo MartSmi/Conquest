@@ -206,7 +206,6 @@ input[type="submit"] {
 
 #trackingInfo {
   position: absolute;
-  /* Not sure how to bring it in front of the center div when you shrink the page*/
   right: 0;
   bottom: 50%;
   height: 30%;
@@ -215,12 +214,6 @@ input[type="submit"] {
   border-radius: 20px;
   text-align: center;
   align-items: center;
-}
-
-#viewTrackingInfo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
 
 .hideTrackingInfo {

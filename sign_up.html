@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <div id="trackingInfo"><p id="info"></p></div>
+    <div id="trackingInfo" class="hideTrackingInfo"><p id="info"></p></div>
     <header>
       <img id="logo" src="images/logo-color.png" />
       <div id="links">
@@ -42,7 +42,6 @@
               <p class="validationtext" id="emailValidation"><br /></p>
             </div>
           </div>
-          /check
         </div>
         <div class="formrow" id="usernamepassword">
           <div class="inputwrapper">
@@ -120,7 +119,7 @@
               id="submit_button_sign_up"
               type="submit"
               value="Sign Up"
-              onclick="onSubmit()"
+              onclick="onSubmit();"
             />
           </div>
         </div>
@@ -130,8 +129,5 @@
       </form>
     </div>
     <footer>©Copyright | Web Uni🦄™</footer>
-    <button id="viewTrackingInfo" onclick="toggleHiddenDiv();">
-      Tracking Data
-    </button>
   </body>
 </html>
