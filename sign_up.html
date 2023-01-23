@@ -42,6 +42,7 @@
               <p class="validationtext" id="emailValidation"><br /></p>
             </div>
           </div>
+          /check
         </div>
         <div class="formrow" id="usernamepassword">
           <div class="inputwrapper">
@@ -52,8 +53,12 @@
             </div>
             <div class="formfield" id="passwordfield">
               <label>Password</label>
-              <input id="password" type="password" isSubmitted &&
-              passwordCheck()" />
+              <input
+                id="password"
+                type="password"
+                oninput="isSubmitted &&
+              passwordCheck()"
+              />
               <p class="validationtext" id="passwordValidation"><br /></p>
             </div>
           </div>
