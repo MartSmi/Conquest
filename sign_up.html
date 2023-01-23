@@ -25,12 +25,13 @@
     </header>
     <div id="sign_up_center" class="center">
       <h1 id="formtitle">Welcome!</h1>
+      <!-- <form> -->
       <form onsubmit="return false;">
         <div class="formrow" id="nameemail">
           <div class="inputwrapper">
             <div class="formfield">
               <label>Name</label>
-              <input id="name" required />
+              <input id="name" />
               <p class="validationtext" id="nameValidation"><br /></p>
             </div>
             <div class="formfield">
@@ -42,12 +43,21 @@
         </div>
         <div class="formrow" id="usernamepassword">
           <div class="inputwrapper">
-            <div class="formfield">
+            <div class="formfield" id="sexfield">
+              <label>Sex<br /></label>
+              <select>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+              <p class="validationtext" id="sexValidation"><br /></p>
+            </div>
+            <div class="formfield" id="usernamefield">
               <label>Username</label>
               <input id="username" />
               <p class="validationtext" id="usernameValidation"><br /></p>
             </div>
-            <div class="formfield">
+            <div class="formfield" id="passwordfield">
               <label>Password</label>
               <input id="password" />
               <p class="validationtext" id="passwordValidation"><br /></p>
@@ -58,12 +68,12 @@
           <div class="inputwrapper" id="addresszip">
             <div class="formfield">
               <label>Language</label>
-              <input id="language" type="text" required />
+              <input id="language" type="text" />
               <p class="validationtext" id="languageValidation"><br /></p>
             </div>
             <div class="formfield">
               <label>Country</label>
-              <input id="country" type="text" required />
+              <input id="country" type="text" />
               <p class="validationtext" id="countryValidation"><br /></p>
             </div>
           </div>
@@ -82,16 +92,6 @@
           </div>
         </div>
         <div class="formrow">
-          <div class="formfield" id="sexfield">
-            <label>Sex<br /></label>
-            <select>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="formrow">
           <div class="formfield optionalfield">
             <label>Describe yourself in a sentence</label>
             <input type="text" />
@@ -103,7 +103,7 @@
               id="submit_button_sign_up"
               type="submit"
               value="Sign Up"
-              onclick="usernameCheck(); passwordCheck(); nameCheck(); countryCheck(); languageCheck();"
+              onclick="onSubmit()"
             />
           </div>
         </div>

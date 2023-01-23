@@ -113,6 +113,7 @@ input[type="submit"] {
   background: none;
   outline: rgba(57, 62, 70, 1);
   border-style: solid;
+  border-width: 2px;
 }
 
 .formfield > label,
@@ -176,4 +177,26 @@ input[type="submit"] {
 
 #sexfield > select {
   outline: none;
+  background-color: transparent;
+  height: 30px;
+  border-radius: 3px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-width: 2px;
+}
+
+#sexfield > select > option {
+  background-color: transparent;
+}
+
+#sexfield {
+  flex: 1 0 0;
+}
+
+#usernamefield {
+  flex: 3 0 0;
+}
+
+#passwordfield {
+  flex: 3 0 0;
 }
