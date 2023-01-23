@@ -1,5 +1,7 @@
 let isSubmitted = false;
 
+let totalKeyPresses = 0;
+
 function onSubmit() {
   isSubmitted = true;
   clearAlert();
@@ -59,6 +61,8 @@ function usernameCheck() {
     updateFieldStatus(usernameInputElement, true);
     alertStatus[0] = true;
   }
+  totalKeyPresses++;
+  console.log(totalKeyPresses);
 }
 
 function passwordCheck() {
