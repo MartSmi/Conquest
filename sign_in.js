@@ -10,8 +10,10 @@ function onSubmit() {
 
 var alertStatus = [false, false];
 
-var form.email = "";
-var form.password = "";
+let form = {
+  email: "",
+  password: "",
+};
 
 function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
   if (isCorrect) {
