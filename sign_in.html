@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conquest</title>
-    <link rel="stylesheet" href="style_sanjit.css" />
+    <link rel="stylesheet" href="sign_up.css" />
     <link rel="stylesheet" href="header.css" />
+    <script src="sign_in.js"></script>
   </head>
   <body>
     <header>
@@ -21,21 +22,39 @@
         <a href="sign_up.html">Sign Up</a>
       </div>
     </header>
-    <div class="center">
-      <h1>Welcome Back!</h1>
-      <form>
-        <div class="login_field">
-          <input type="email" required />
-          <label>Email</label>
+    <div id="sign_up_center" class="center">
+      <h1 id="formtitle">Welcome back!</h1>
+      <form onsubmit="return false;">
+        <div class="formrow" id="nameemail">
+          <div class="formfield">
+            <label>Email</label>
+            <input id="email" oninput="isSubmitted && emailCheck()" />
+            <p class="validationtext" id="emailValidation"><br /></p>
+          </div>
         </div>
-        <div class="login_field">
-          <input type="password" required />
-          <label>Password</label>
+        <div class="formrow" id="usernamepassword">
+          <div class="formfield" id="passwordfield">
+            <label>Password</label>
+            <input
+              id="password"
+              type="password"
+              oninput="isSubmitted &&
+              passwordCheck()"
+            />
+            <p class="validationtext" id="passwordValidation"><br /></p>
+          </div>
         </div>
-        <div id="submit_login_wrapper">
-          <input id="submit_button_login" type="submit" value="Login" />
+        <div class="formrow">
+          <div id="submit_button_wrapper">
+            <input
+              id="submit_button_sign_up"
+              type="submit"
+              value="Login"
+              onclick="onSubmit()"
+            />
+          </div>
         </div>
-        <div class="sign_up_link">
+        <div class="sign_in_link">
           New here? <a href="sign_up.html">Sign Up</a>
         </div>
       </form>

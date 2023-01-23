@@ -23,7 +23,7 @@ header {
 }
 
 #links > a {
-  font-size: 20px;
+  font-size: min(2vw, 20px);
   color: #eeeeee;
   opacity: 80%;
   margin-left: 3%;
