@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style_martynas.css" />
+    <link rel="stylesheet" href="header.css" />
+    <title>Conquest</title>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="images/logo-color.png" />
+      <div id="links">
+        <a href="index.html"> Homepage</a>
+        <a href="create_goal.html"> Create goal</a>
+        <a href="create_target.html"> Create target</a>
+        <a href="view_goals.html">View goals</a>
+        <a href="view_targets.html">View targets</a>
+        <a href="sign_in.html">Login</a>
+        <a href="sign_up.html">Sign Up</a>
+      </div>
+    </header>
+
+    <div id="outerform">
+      <h2 id="formtitle">Create goal</h2>
+      <form action="">
+        <div id="mainform">
+          <input
+            type="text"
+            id="fname"
+            name="goalname"
+            placeholder="Goal name"
+          /><br />
+          <textarea
+            id="fdesc"
+            name="goaldesc"
+            cols="40"
+            rows="5"
+            maxlength="200"
+            placeholder="Description (keep it SMART)"
+          ></textarea>
+          <input type="date" id="fdate" name="goaldate" />
+          <input class="fcreate" type="submit" value="Create" />
+        </div>
+      </form>
+    </div>
+    <footer>©Copyright | Web Uni🦄™</footer>
+  </body>
+</html>

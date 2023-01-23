@@ -1,0 +1,221 @@
+@font-face {
+  font-family: Khula;
+  src: url(fonts/Khula-Regular.ttf);
+}
+
+@font-face {
+  font-family: Pacifico;
+  src: url("fonts/Pacifico-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  font-family: Khula;
+  background-color: rgb(28, 33, 40);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  height: 40px;
+  bottom: 0;
+  background-color: #4ecca3;
+  opacity: 87%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  margin: auto;
+  position: relative;
+  overflow: scroll;
+  background-color: rgba(238, 238, 238, 1);
+  border-radius: 5%;
+  align-content: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#formtitle {
+  color: rgba(57, 62, 70, 1);
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: -2%;
+}
+
+.center form {
+  margin-left: 5%;
+  margin-right: 5%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  background-color: rgba(78, 204, 163, 1);
+  border-radius: 20px;
+  border: none;
+  width: fit-content;
+}
+
+.gender {
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  width: 100%;
+}
+
+.sign_up_link {
+  position: relative;
+  width: 70%;
+  margin-top: 2%;
+}
+
+#submit_button_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#submit_button_sign_up {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.formfield {
+  position: relative;
+  border-bottom: 1% solid rgba(57, 62, 70, 1);
+  margin-bottom: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.formfield input {
+  width: 100%;
+  height: 30px;
+  border-radius: 3px;
+  padding: 5px;
+  padding-left: 8px;
+  box-sizing: border-box;
+  font-size: 80%;
+  background: none;
+  outline: rgba(57, 62, 70, 1);
+  border-style: solid;
+  border-width: 2px;
+}
+
+.formfield > label,
+.formfield > p {
+  color: rgb(126, 124, 124);
+}
+
+.inputwrapper {
+  display: flex;
+  width: 100%;
+}
+
+.inputwrapper > div {
+  width: calc(50% - 10px);
+}
+
+.sign_in_link {
+  position: relative;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+#zipfield {
+  flex: 1 0 0;
+}
+
+#addressfield {
+  flex: 3 0 0;
+}
+
+.formrow {
+  width: 100%;
+}
+
+.optionalfield > label::after {
+  content: " - Optional";
+  font-style: italic;
+}
+
+.correctfield > input,
+.correctfield > select {
+  border-color: green;
+}
+
+.incorrectfield > input,
+.incorrectfield > select {
+  border-color: red;
+}
+
+.correctfield > .validationtext {
+  color: green;
+}
+
+.incorrectfield > .validationtext {
+  color: red;
+}
+
+.validationtext {
+  font-size: smaller;
+}
+
+#sexfield > select {
+  outline: none;
+  background-color: transparent;
+  height: 30px;
+  border-radius: 3px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-width: 2px;
+}
+
+#sexfield > select > option {
+  background-color: transparent;
+}
+
+#sexfield {
+  flex: 1 0 0;
+}
+
+#usernamefield {
+  flex: 3 0 0;
+}
+
+#passwordfield {
+  flex: 3 0 0;
+}
+
+#trackingInfo {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  background-color: #4ecca3;
+  border-radius: 20px;
+  text-align: left;
+  align-items: center;
+  padding: 10px;
+  z-index: 1;
+}
+
+.hideTrackingInfo {
+  display: none;
+}

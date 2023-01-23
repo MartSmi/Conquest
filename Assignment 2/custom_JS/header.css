@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  height: 8vh;
+  top: 0;
+  background-color: #393e46;
+}
+
+#logo {
+  height: 6vh;
+  width: 6vh;
+  border-radius: 50%;
+  margin-top: 1vh;
+  margin-left: 1vh;
+}
+
+#links {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#links > a {
+  font-size: min(2vw, 20px);
+  color: #eeeeee;
+  opacity: 80%;
+  margin-left: 3%;
+  margin-right: 3%;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+#links > a:hover {
+  opacity: 90%;
+}
