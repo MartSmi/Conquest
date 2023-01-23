@@ -63,11 +63,11 @@ footer {
 }
 
 input[type="submit"] {
-  padding: 2%;
+  padding: 10px;
   background-color: rgba(78, 204, 163, 1);
   border-radius: 20px;
   border: none;
-  width: 15%;
+  width: fit-content;
   cursor: pointer;
 }
 

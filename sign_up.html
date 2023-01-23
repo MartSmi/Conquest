@@ -27,7 +27,6 @@
     </header>
     <div id="sign_up_center" class="center">
       <h1 id="formtitle">Welcome!</h1>
-      <!-- <form> -->
       <form onsubmit="return false;">
         <div class="formrow" id="nameemail">
           <div class="inputwrapper">
@@ -67,7 +66,7 @@
             <div class="formfield" id="sexfield">
               <label>Sex<br /></label>
               <select id="sex" oninput="isSubmitted && sexCheck()">
-                <option value="default" selected disabled hidden></option>
+                <option value="" selected disabled hidden></option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>

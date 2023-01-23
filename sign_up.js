@@ -17,7 +17,6 @@ function onSubmit() {
   getSex();
   getDescription();
   displayAlertMessage();
-  id = "sex";
 }
 
 var alertStatus = [false, false, false, false, false, false, false, false];
@@ -57,6 +56,13 @@ function usernameCheck() {
       "Must be 5-12 characters long!"
     );
     alertStatus[0] = false;
+  } else if (
+    !/^[A-Z]{1}.{3,10}[0-9!@#$%^&*()_+\-=\{}\[\]\|\\;',./?]{1}$/.test(
+      usernameField
+    )
+  ) {
+    updateFieldStatus(usernameInputElement, false, "Incorrect format!");
+    alertStatus[0] = false;
   } else {
     updateFieldStatus(usernameInputElement, true);
     alertStatus[0] = true;
@@ -76,6 +82,17 @@ function passwordCheck() {
       passwordInputElement,
       false,
       "Must have at least 12 characters!"
+    );
+    alertStatus[1] = false;
+  } else if (
+    !/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=\{}\[\]\|\\;',./?])[A-z0-9!@#$%^&*()_+\-=\{}\[\]\|\\;',./?]{12,}$/.test(
+      passwordField
+    )
+  ) {
+    updateFieldStatus(
+      passwordInputElement,
+      false,
+      "Should contain these types of characters: (a, A, 0, #)"
     );
     alertStatus[1] = false;
   } else if (passwordField.length < 14) {
