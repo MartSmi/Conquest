@@ -19,18 +19,18 @@ function onSubmit() {
 }
 
 var alertStatus = [false, false, false, false, false, false, false, false];
-/*
-var nameOfUser;
-var username;
-var password;
-var email;
-var language;
-var country;
-var address;
-var zip;
-var sex;
-var description;
-*/
+
+var nameField = "";
+var usernameField = "";
+var passwordField = "";
+var emailField = "";
+var languageField = "";
+var countryField = "";
+var addressField = "";
+var zipField = "";
+var sexField = "";
+var descriptionField = "";
+
 function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
   if (isCorrect) {
     inputField.parentElement.classList.remove("incorrectfield");
@@ -44,11 +44,11 @@ function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
 
 function usernameCheck() {
   let usernameInputElement = document.getElementById("username");
-  var username = usernameInputElement.value;
-  if (username.length === 0) {
+  usernameField = usernameInputElement.value;
+  if (usernameField.length === 0) {
     updateFieldStatus(usernameInputElement, false, "Provide a username");
     alertStatus[0] = false;
-  } else if (username.length < 5 || username.length > 12) {
+  } else if (usernameField.length < 5 || usernameField.length > 12) {
     updateFieldStatus(
       usernameInputElement,
       false,
@@ -63,18 +63,18 @@ function usernameCheck() {
 
 function passwordCheck() {
   let passwordInputElement = document.getElementById("password");
-  var password = passwordInputElement.value;
-  if (password.length === 0) {
+  passwordField = passwordInputElement.value;
+  if (passwordField.length === 0) {
     updateFieldStatus(passwordInputElement, false, "Provide a password");
     alertStatus[1] = false;
-  } else if (password.length < 12) {
+  } else if (passwordField.length < 12) {
     updateFieldStatus(
       passwordInputElement,
       false,
       "Must have at least 12 characters!"
     );
     alertStatus[1] = false;
-  } else if (password.length < 14) {
+  } else if (passwordField.length < 14) {
     updateFieldStatus(
       passwordInputElement,
       true,
@@ -89,11 +89,11 @@ function passwordCheck() {
 
 function nameCheck() {
   let nameInputElement = document.getElementById("name");
-  var name = nameInputElement.value;
-  if (name.length === 0) {
+  nameField = nameInputElement.value;
+  if (nameField.length === 0) {
     updateFieldStatus(nameInputElement, false, "Provide your name");
     alertStatus[2] = false;
-  } else if (!/^[A-z\s]+$/.test(name)) {
+  } else if (!/^[A-z\s]+$/.test(nameField)) {
     updateFieldStatus(nameInputElement, false, "Can only contain letters");
     alertStatus[2] = false;
   } else {
@@ -104,8 +104,8 @@ function nameCheck() {
 
 function languageCheck() {
   let languageInputElement = document.getElementById("language");
-  var language = languageInputElement.value;
-  if (language.length < 1) {
+  languageField = languageInputElement.value;
+  if (languageField.length < 1) {
     updateFieldStatus(languageInputElement, false, "Provide your language");
     alertStatus[3] = false;
   } else {
@@ -116,8 +116,8 @@ function languageCheck() {
 
 function countryCheck() {
   let countryInputElement = document.getElementById("country");
-  var country = countryInputElement.value;
-  if (country.length < 1) {
+  countryField = countryInputElement.value;
+  if (countryField.length < 1) {
     updateFieldStatus(countryInputElement, false, "Provide a country");
     alertStatus[4] = false;
   } else {
@@ -128,10 +128,10 @@ function countryCheck() {
 
 function emailCheck() {
   let emailInputElement = document.getElementById("email");
-  var email = emailInputElement.value;
-  if (email.length === 0) {
+  emailField = emailInputElement.value;
+  if (emailField.length === 0) {
     updateFieldStatus(emailInputElement, false, "Provide your email");
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField)) {
     updateFieldStatus(emailInputElement, false, "Incorrect email");
     alertStatus[5] = false;
   } else {
@@ -142,14 +142,14 @@ function emailCheck() {
 
 function zipCheck() {
   let zipInputElement = document.getElementById("zip");
-  var zip = zipInputElement.value;
-  if (zip.length == 0) {
+  zipField = zipInputElement.value;
+  if (zipField.length == 0) {
     updateFieldStatus(zipInputElement, false, "Provide a zip code");
     alertStatus[6] = false;
-  } else if (!(zip.length == 6)) {
+  } else if (!(zipField.length == 6)) {
     updateFieldStatus(zipInputElement, false, "Must be 6 digits");
     alertStatus[6] = false;
-  } else if (!/^[1-9]{4}[A-z]{2}$/.test(zip)) {
+  } else if (!/^[1-9]{4}[A-z]{2}$/.test(zipField)) {
     updateFieldStatus(zipInputElement, false, "Incorect zip code ");
     alertStatus[6] = false;
   } else {
@@ -161,8 +161,8 @@ function zipCheck() {
 function sexCheck() {
   //TODO: alert status not set
   let sexSelectElement = document.getElementById("sex");
-  let selectedValue = sexSelectElement.value;
-  if (selectedValue === "default") {
+  sexField = sexSelectElement.value;
+  if (sexField === "") {
     updateFieldStatus(sexSelectElement, false, "Select sex");
     alertStatus[7] = true;
   } else {
@@ -196,34 +196,34 @@ function displayAlertMessage() {
   if (clearAlert() == true) {
     alert(
       "Name: " +
-        name.value +
+        nameField +
         "\n" +
         "Email: " +
-        email.value +
+        emailField +
         "\n" +
         "Username: " +
-        username.value +
+        usernameField +
         "\n" +
         "Password: " +
-        password.value +
+        passwordField +
         "\n" +
         "Language: " +
-        language.value +
+        languageField +
         "\n" +
         "Country: " +
-        country.value +
+        countryField +
         "\n" +
         "Address: " +
-        address.value +
+        addressField +
         "\n" +
         "Zip Code: " +
-        zip.value +
+        zipField +
         "\n" +
         "Sex: " +
-        sex.value +
+        sexField +
         "\n" +
         "Description: " +
-        description.value
+        descriptionField
     );
     toggleHiddenDiv();
   }
