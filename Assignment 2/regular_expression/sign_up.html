@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="sign_up.css" />
     <link rel="stylesheet" href="header.css" />
     <!-- <script src="sign_up.js"></script> -->
-    <script src="tracking.js"></script>
+    <!-- <script src="tracking.js"></script> -->
   </head>
 
   <body>
@@ -32,12 +32,17 @@
           <div class="inputwrapper">
             <div class="formfield">
               <label>Name</label>
-              <input id="name" required />
+              <input id="name" required pattern="^[a-z\s]+$" />
               <p class="validationtext" id="nameValidation"><br /></p>
             </div>
             <div class="formfield">
               <label>Email</label>
-              <input id="email" type="email" required />
+              <input
+                id="email"
+                type="email"
+                required
+                pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+              />
               <p class="validationtext" id="emailValidation"><br /></p>
             </div>
           </div>
@@ -101,12 +106,7 @@
         </div>
         <div class="formrow">
           <div id="submit_button_wrapper">
-            <input
-              id="submit_button_sign_up"
-              type="submit"
-              value="Sign Up"
-              onclick="onSubmit()"
-            />
+            <input id="submit_button_sign_up" type="submit" value="Sign Up" />
           </div>
         </div>
         <div class="sign_in_link">
