@@ -1,4 +1,7 @@
+let isSubmitted = false;
+
 function onSubmit() {
+  isSubmitted = true;
   clearAlert();
   usernameCheck();
   passwordCheck();
@@ -7,10 +10,12 @@ function onSubmit() {
   languageCheck();
   emailCheck();
   zipCheck();
+  sexCheck();
   getAddress();
   getSex();
   getDescription();
   displayAlertMessage();
+  id = "sex";
 }
 
 var alertStatus = [false, false, false, false, false, false, false];
@@ -40,7 +45,10 @@ function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
 function usernameCheck() {
   let usernameInputElement = document.getElementById("username");
   var username = usernameInputElement.value;
-  if (username.length < 5 || username.length > 12) {
+  if (username.length === 0) {
+    updateFieldStatus(usernameInputElement, false, "Provide a username");
+    alertStatus[0] = false;
+  } else if (username.length < 5 || username.length > 12) {
     updateFieldStatus(
       usernameInputElement,
       false,
@@ -56,7 +64,10 @@ function usernameCheck() {
 function passwordCheck() {
   let passwordInputElement = document.getElementById("password");
   var password = passwordInputElement.value;
-  if (password.length < 12) {
+  if (password.length === 0) {
+    updateFieldStatus(passwordInputElement, false, "Provide a password");
+    alertStatus[1] = false;
+  } else if (password.length < 12) {
     updateFieldStatus(
       passwordInputElement,
       false,
@@ -67,7 +78,7 @@ function passwordCheck() {
     updateFieldStatus(
       passwordInputElement,
       true,
-      "Recommended to be more than 14 characters!"
+      "Recommend more than 14 characters!"
     );
     alertStatus[1] = true;
   } else {
@@ -107,7 +118,7 @@ function countryCheck() {
   let countryInputElement = document.getElementById("country");
   var country = countryInputElement.value;
   if (country.length < 1) {
-    updateFieldStatus(countryInputElement, false, "Provide your country");
+    updateFieldStatus(countryInputElement, false, "Provide a country");
     alertStatus[4] = false;
   } else {
     updateFieldStatus(countryInputElement, true);
@@ -118,7 +129,9 @@ function countryCheck() {
 function emailCheck() {
   let emailInputElement = document.getElementById("email");
   var email = emailInputElement.value;
-  if (!email.includes("@")) {
+  if (email.length === 0) {
+    updateFieldStatus(emailInputElement, false, "Provide your email");
+  } else if (!email.includes("@")) {
     updateFieldStatus(emailInputElement, false, "Must contain @");
     alertStatus[5] = false;
   } else {
@@ -130,12 +143,29 @@ function emailCheck() {
 function zipCheck() {
   let zipInputElement = document.getElementById("zip");
   var zip = zipInputElement.value;
-  if (!(zip.length == 6)) {
+  if (zip.length == 0) {
+    updateFieldStatus(zipInputElement, false, "Provide a zip code");
+    alertStatus[6] = false;
+  } else if (!(zip.length == 6)) {
     updateFieldStatus(zipInputElement, false, "Must be 6 digits");
+    alertStatus[6] = false;
+  } else if (!/^[1-9]{4}[A-z]{2}$/.test(zip)) {
+    updateFieldStatus(zipInputElement, false, "Incorect zip code ");
     alertStatus[6] = false;
   } else {
     updateFieldStatus(zipInputElement, true);
     alertStatus[6] = true;
+  }
+}
+
+function sexCheck() {
+  //TODO: alert status not set
+  let sexSelectElement = document.getElementById("sex");
+  let selectedValue = sexSelectElement.value;
+  if (selectedValue === "default") {
+    updateFieldStatus(sexSelectElement, false, "Select sex");
+  } else {
+    updateFieldStatus(sexSelectElement, true);
   }
 }
 

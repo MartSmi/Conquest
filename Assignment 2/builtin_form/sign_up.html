@@ -7,7 +7,7 @@
     <title>Conquest</title>
     <link rel="stylesheet" href="sign_up.css" />
     <link rel="stylesheet" href="header.css" />
-    <script src="sign_up.js"></script>
+    <!-- <script src="sign_up.js"></script> -->
     <script src="tracking.js"></script>
   </head>
 
@@ -27,18 +27,17 @@
     </header>
     <div id="sign_up_center" class="center">
       <h1 id="formtitle">Welcome!</h1>
-      <!-- <form> -->
       <form onsubmit="return false;">
         <div class="formrow" id="nameemail">
           <div class="inputwrapper">
             <div class="formfield">
               <label>Name</label>
-              <input id="name" oninput="isSubmitted && nameCheck()" />
+              <input id="name" required />
               <p class="validationtext" id="nameValidation"><br /></p>
             </div>
             <div class="formfield">
               <label>Email</label>
-              <input id="email" oninput="isSubmitted && emailCheck()" />
+              <input id="email" type="email" required />
               <p class="validationtext" id="emailValidation"><br /></p>
             </div>
           </div>
@@ -47,13 +46,18 @@
           <div class="inputwrapper">
             <div class="formfield" id="usernamefield">
               <label>Username</label>
-              <input id="username" oninput="isSubmitted && usernameCheck()" />
+              <input
+                id="username"
+                type="text"
+                required
+                minlength="5"
+                maxlength="12"
+              />
               <p class="validationtext" id="usernameValidation"><br /></p>
             </div>
             <div class="formfield" id="passwordfield">
               <label>Password</label>
-              <input id="password" type="password" isSubmitted &&
-              passwordCheck()" />
+              <input id="password" type="password" required minlength="12" />
               <p class="validationtext" id="passwordValidation"><br /></p>
             </div>
           </div>
@@ -62,8 +66,8 @@
           <div class="inputwrapper" id="languagecountry">
             <div class="formfield" id="sexfield">
               <label>Sex<br /></label>
-              <select id="sex" oninput="isSubmitted && sexCheck()">
-                <option value="default" selected disabled hidden></option>
+              <select id="sex" required>
+                <option value="" selected disabled hidden></option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
@@ -72,20 +76,12 @@
             </div>
             <div class="formfield">
               <label>Language</label>
-              <input
-                id="language"
-                type="text"
-                oninput="isSubmitted && languageCheck()"
-              />
+              <input id="language" type="text" required />
               <p class="validationtext" id="languageValidation"><br /></p>
             </div>
             <div class="formfield">
               <label>Country</label>
-              <input
-                id="country"
-                type="text"
-                oninput="isSubmitted && countryCheck()"
-              />
+              <input id="country" type="text" required />
               <p class="validationtext" id="countryValidation"><br /></p>
             </div>
           </div>
@@ -94,7 +90,7 @@
           <div class="inputwrapper" id="addresszip">
             <div class="formfield" id="zipfield">
               <label>Zip Code</label>
-              <input id="zip" oninput="isSubmitted && zipCheck()" />
+              <input id="zip" required minlength="6" maxlength="6" />
               <p class="validationtext" id="zipValidation"><br /></p>
             </div>
             <div class="formfield optionalfield" id="addressfield">

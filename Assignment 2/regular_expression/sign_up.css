@@ -68,6 +68,7 @@ input[type="submit"] {
   border-radius: 20px;
   border: none;
   width: 15%;
+  cursor: pointer;
 }
 
 .gender {
@@ -121,6 +122,14 @@ input[type="submit"] {
 .formfield > p {
   color: rgb(126, 124, 124);
 }
+/* 
+.formfield:not(.optionalfield) input:not([]):valid {
+  border-color: green;
+}
+
+.formfield:not(.optionalfield) input:not([]) {
+  border-color: red;
+} */
 
 .inputwrapper {
   display: flex;
