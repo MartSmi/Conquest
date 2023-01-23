@@ -32,12 +32,12 @@
           <div class="inputwrapper">
             <div class="formfield">
               <label>Name</label>
-              <input id="name" oninput="isSubmitted && nameCheck()" />
+              <input id="name" oninput="isSubmitted()&& nameCheck()" />
               <p class="validationtext" id="nameValidation"><br /></p>
             </div>
             <div class="formfield">
               <label>Email</label>
-              <input id="email" oninput="isSubmitted && emailCheck()" />
+              <input id="email" oninput="isSubmitted()&& emailCheck()" />
               <p class="validationtext" id="emailValidation"><br /></p>
             </div>
           </div>
@@ -46,7 +46,7 @@
           <div class="inputwrapper">
             <div class="formfield" id="usernamefield">
               <label>Username</label>
-              <input id="username" oninput="isSubmitted && usernameCheck()" />
+              <input id="username" oninput="isSubmitted()&& usernameCheck()" />
               <p class="validationtext" id="usernameValidation"><br /></p>
             </div>
             <div class="formfield" id="passwordfield">
@@ -54,7 +54,7 @@
               <input
                 id="password"
                 type="password"
-                oninput="isSubmitted &&
+                oninput="isSubmitted()&&
               passwordCheck()"
               />
               <p class="validationtext" id="passwordValidation"><br /></p>
@@ -65,7 +65,7 @@
           <div class="inputwrapper" id="languagecountry">
             <div class="formfield" id="sexfield">
               <label>Sex<br /></label>
-              <select id="sex" oninput="isSubmitted && sexCheck()">
+              <select id="sex" oninput="isSubmitted()&& sexCheck()">
                 <option value="" selected disabled hidden></option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -78,7 +78,7 @@
               <input
                 id="language"
                 type="text"
-                oninput="isSubmitted && languageCheck()"
+                oninput="isSubmitted()&& languageCheck()"
               />
               <p class="validationtext" id="languageValidation"><br /></p>
             </div>
@@ -87,7 +87,7 @@
               <input
                 id="country"
                 type="text"
-                oninput="isSubmitted && countryCheck()"
+                oninput="isSubmitted()&& countryCheck()"
               />
               <p class="validationtext" id="countryValidation"><br /></p>
             </div>
@@ -97,7 +97,7 @@
           <div class="inputwrapper" id="addresszip">
             <div class="formfield" id="zipfield">
               <label>Zip Code</label>
-              <input id="zip" oninput="isSubmitted && zipCheck()" />
+              <input id="zip" oninput="isSubmitted()&& zipCheck()" />
               <p class="validationtext" id="zipValidation"><br /></p>
             </div>
             <div class="formfield optionalfield" id="addressfield">

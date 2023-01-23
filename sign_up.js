@@ -1,9 +1,15 @@
-let isSubmitted = false;
+let didSubmit = false;
 
 let totalKeyPresses = 0;
 
+function isSubmitted() {
+  totalKeyPresses++;
+  console.log(totalKeyPresses);
+  return didSubmit;
+}
+
 function onSubmit() {
-  isSubmitted = true;
+  didSubmit = true;
   clearAlert();
   usernameCheck();
   passwordCheck();
@@ -21,16 +27,18 @@ function onSubmit() {
 
 var alertStatus = [false, false, false, false, false, false, false, false];
 
-var nameField = "";
-var usernameField = "";
-var passwordField = "";
-var emailField = "";
-var languageField = "";
-var countryField = "";
-var addressField = "";
-var zipField = "";
-var sexField = "";
-var descriptionField = "";
+let form = {
+  name: "",
+  username: "",
+  password: "",
+  email: "",
+  language: "",
+  country: "",
+  address: "",
+  zip: "",
+  sex: "",
+  desc: "",
+};
 
 function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
   if (isCorrect) {
@@ -45,11 +53,11 @@ function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
 
 function usernameCheck() {
   let usernameInputElement = document.getElementById("username");
-  usernameField = usernameInputElement.value;
-  if (usernameField.length === 0) {
+  form.username = usernameInputElement.value;
+  if (form.username.length === 0) {
     updateFieldStatus(usernameInputElement, false, "Provide a username");
     alertStatus[0] = false;
-  } else if (usernameField.length < 5 || usernameField.length > 12) {
+  } else if (form.username.length < 5 || form.username.length > 12) {
     updateFieldStatus(
       usernameInputElement,
       false,
@@ -58,7 +66,7 @@ function usernameCheck() {
     alertStatus[0] = false;
   } else if (
     !/^[A-Z]{1}.{3,10}[0-9!@#$%^&*()_+\-=\{}\[\]\|\\;',./?]{1}$/.test(
-      usernameField
+      form.username
     )
   ) {
     updateFieldStatus(usernameInputElement, false, "Incorrect format!");
@@ -67,17 +75,15 @@ function usernameCheck() {
     updateFieldStatus(usernameInputElement, true);
     alertStatus[0] = true;
   }
-  totalKeyPresses++;
-  console.log(totalKeyPresses);
 }
 
 function passwordCheck() {
   let passwordInputElement = document.getElementById("password");
-  passwordField = passwordInputElement.value;
-  if (passwordField.length === 0) {
+  form.password = passwordInputElement.value;
+  if (form.password.length === 0) {
     updateFieldStatus(passwordInputElement, false, "Provide a password");
     alertStatus[1] = false;
-  } else if (passwordField.length < 12) {
+  } else if (form.password.length < 12) {
     updateFieldStatus(
       passwordInputElement,
       false,
@@ -86,7 +92,7 @@ function passwordCheck() {
     alertStatus[1] = false;
   } else if (
     !/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=\{}\[\]\|\\;',./?])[A-z0-9!@#$%^&*()_+\-=\{}\[\]\|\\;',./?]{12,}$/.test(
-      passwordField
+      form.password
     )
   ) {
     updateFieldStatus(
@@ -95,7 +101,7 @@ function passwordCheck() {
       "Should contain these types of characters: (a, A, 0, #)"
     );
     alertStatus[1] = false;
-  } else if (passwordField.length < 14) {
+  } else if (form.password.length < 14) {
     updateFieldStatus(
       passwordInputElement,
       true,
@@ -110,11 +116,11 @@ function passwordCheck() {
 
 function nameCheck() {
   let nameInputElement = document.getElementById("name");
-  nameField = nameInputElement.value;
-  if (nameField.length === 0) {
+  form.name = nameInputElement.value;
+  if (form.name.length === 0) {
     updateFieldStatus(nameInputElement, false, "Provide your name");
     alertStatus[2] = false;
-  } else if (!/^[A-z\s]+$/.test(nameField)) {
+  } else if (!/^[A-z\s]+$/.test(form.name)) {
     updateFieldStatus(nameInputElement, false, "Can only contain letters");
     alertStatus[2] = false;
   } else {
@@ -125,8 +131,8 @@ function nameCheck() {
 
 function languageCheck() {
   let languageInputElement = document.getElementById("language");
-  languageField = languageInputElement.value;
-  if (languageField.length < 1) {
+  form.language = languageInputElement.value;
+  if (form.language.length < 1) {
     updateFieldStatus(languageInputElement, false, "Provide your language");
     alertStatus[3] = false;
   } else {
@@ -137,8 +143,8 @@ function languageCheck() {
 
 function countryCheck() {
   let countryInputElement = document.getElementById("country");
-  countryField = countryInputElement.value;
-  if (countryField.length < 1) {
+  form.country = countryInputElement.value;
+  if (form.country.length < 1) {
     updateFieldStatus(countryInputElement, false, "Provide a country");
     alertStatus[4] = false;
   } else {
@@ -149,10 +155,10 @@ function countryCheck() {
 
 function emailCheck() {
   let emailInputElement = document.getElementById("email");
-  emailField = emailInputElement.value;
-  if (emailField.length === 0) {
+  form.email = emailInputElement.value;
+  if (form.email.length === 0) {
     updateFieldStatus(emailInputElement, false, "Provide your email");
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField)) {
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
     updateFieldStatus(emailInputElement, false, "Incorrect email");
     alertStatus[5] = false;
   } else {
@@ -163,14 +169,14 @@ function emailCheck() {
 
 function zipCheck() {
   let zipInputElement = document.getElementById("zip");
-  zipField = zipInputElement.value;
-  if (zipField.length == 0) {
+  form.zip = zipInputElement.value;
+  if (form.zip.length == 0) {
     updateFieldStatus(zipInputElement, false, "Provide a zip code");
     alertStatus[6] = false;
-  } else if (!(zipField.length == 6)) {
+  } else if (!(form.zip.length == 6)) {
     updateFieldStatus(zipInputElement, false, "Must be 6 digits");
     alertStatus[6] = false;
-  } else if (!/^[1-9]{4}[A-z]{2}$/.test(zipField)) {
+  } else if (!/^[1-9]{4}[A-z]{2}$/.test(form.zip)) {
     updateFieldStatus(zipInputElement, false, "Incorect zip code ");
     alertStatus[6] = false;
   } else {
@@ -180,10 +186,9 @@ function zipCheck() {
 }
 
 function sexCheck() {
-  //TODO: alert status not set
   let sexSelectElement = document.getElementById("sex");
-  sexField = sexSelectElement.value;
-  if (sexField === "") {
+  form.sex = sexSelectElement.value;
+  if (form.sex === "") {
     updateFieldStatus(sexSelectElement, false, "Select sex");
     alertStatus[7] = true;
   } else {
@@ -217,34 +222,34 @@ function displayAlertMessage() {
   if (clearAlert() == true) {
     alert(
       "Name: " +
-        nameField +
+        form.name +
         "\n" +
         "Email: " +
-        emailField +
+        form.email +
         "\n" +
         "Username: " +
-        usernameField +
+        form.username +
         "\n" +
         "Password: " +
-        passwordField +
+        form.password +
         "\n" +
         "Language: " +
-        languageField +
+        form.language +
         "\n" +
         "Country: " +
-        countryField +
+        form.country +
         "\n" +
         "Address: " +
-        addressField +
+        form.address +
         "\n" +
         "Zip Code: " +
-        zipField +
+        form.zip +
         "\n" +
         "Sex: " +
-        sexField +
+        form.sex +
         "\n" +
         "Description: " +
-        descriptionField
+        form.desc
     );
     toggleHiddenDiv();
   }

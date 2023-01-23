@@ -1,9 +1,10 @@
-function toggleHiddenDiv(){
-    var hiddenDiv = document.getElementById("trackingInfo"); 
-    hiddenDiv.classList.remove("hideTrackingInfo");
-    displayClicks();
-    timeSpentTracker();
-    displayKeyPresses();
+function toggleHiddenDiv() {
+  var hiddenDiv = document.getElementById("trackingInfo");
+  hiddenDiv.classList.remove("hideTrackingInfo");
+  displayClicks();
+  timeSpentTracker();
+  displayKeyPresses();
+  displayTotalCharacters();
 }
 
 var clicks = 0;
@@ -11,8 +12,8 @@ document.addEventListener("click", () => {
   clicks++;
 });
 
-function displayClicks(){
-    document.getElementById("info").innerHTML = 
+function displayClicks() {
+  document.getElementById("info").innerHTML =
     "Number of mouse clicks: " + clicks;
 }
 
@@ -42,8 +43,16 @@ window.addEventListener('load', () =>{
     })
 })
 */
-function displayKeyPresses(){
-    document.getElementById("info").innerHTML += 
+function displayKeyPresses() {
+  document.getElementById("info").innerHTML +=
     "Total key presses: " + totalKeyPresses + "<br/>";
 }
 
+function displayTotalCharacters() {
+  let totalCharsTyped = 0;
+  for (const [key, value] of Object.entries(form))
+    if (key != "sex") totalCharsTyped += value.length;
+
+  document.getElementById("info").innerHTML +=
+    "A total number of characters typed: " + totalCharsTyped + "<br/>";
+}

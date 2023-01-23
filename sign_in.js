@@ -10,8 +10,8 @@ function onSubmit() {
 
 var alertStatus = [false, false];
 
-var emailField = "";
-var passwordField = "";
+var form.email = "";
+var form.password = "";
 
 function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
   if (isCorrect) {
@@ -26,10 +26,10 @@ function updateFieldStatus(inputField, isCorrect, status = "Looks good!") {
 
 function emailCheck() {
   let emailInputElement = document.getElementById("email");
-  emailField = emailInputElement.value;
-  if (emailField.length === 0) {
+  form.email = emailInputElement.value;
+  if (form.email.length === 0) {
     updateFieldStatus(emailInputElement, false, "Provide your email");
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField)) {
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
     updateFieldStatus(emailInputElement, false, "Incorrect email");
     alertStatus[5] = false;
   } else {
@@ -39,11 +39,11 @@ function emailCheck() {
 }
 function passwordCheck() {
   let passwordInputElement = document.getElementById("password");
-  passwordField = passwordInputElement.value;
-  if (passwordField.length === 0) {
+  form.password = passwordInputElement.value;
+  if (form.password.length === 0) {
     updateFieldStatus(passwordInputElement, false, "Provide a password");
     alertStatus[1] = false;
-  } else if (passwordField.length < 12) {
+  } else if (form.password.length < 12) {
     updateFieldStatus(
       passwordInputElement,
       false,
@@ -52,7 +52,7 @@ function passwordCheck() {
     alertStatus[1] = false;
   } else if (
     !/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=\{}\[\]\|\\;',./?])[A-z0-9!@#$%^&*()_+\-=\{}\[\]\|\\;',./?]{12,}$/.test(
-      passwordField
+      form.password
     )
   ) {
     updateFieldStatus(passwordInputElement, false, "Incorrect format");
@@ -74,6 +74,6 @@ function clearAlert() {
 
 function displayAlertMessage() {
   if (clearAlert() == true) {
-    alert("Email: " + emailField + "\n" + "Password: " + passwordField);
+    alert("Email: " + form.email + "\n" + "Password: " + form.password);
   }
 }
