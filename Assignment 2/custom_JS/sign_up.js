@@ -10,7 +10,7 @@ function isSubmitted() {
 
 function onSubmit() {
   didSubmit = true;
-  clearAlert();1
+  clearAlert();
   usernameCheck();
   passwordCheck();
   nameCheck();
@@ -62,8 +62,10 @@ function usernameCheck() {
     );
     alertStatus[0] = false;
   } else if (
-    !/^[A-Z]{1}.{3,10}[0-9!@#$%^&*()_+\-=\{}\[\]\|\\;',./?]{1}$/.test(
-      form.username
+    !isCharUpperCase(form.username[0]) ||
+    !(
+      isCharSpecial(form.username[form.username.length - 1]) ||
+      isCharNumber(form.username[form.username.length - 1])
     )
   ) {
     updateFieldStatus(usernameInputElement, false, "Incorrect format!");
@@ -88,8 +90,11 @@ function passwordCheck() {
     );
     alertStatus[1] = false;
   } else if (
-    !/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=\{}\[\]\|\\;',./?])[A-z0-9!@#$%^&*()_+\-=\{}\[\]\|\\;',./?]{12,}$/.test(
-      form.password
+    !(
+      stringContainsLowerCaseChar(form.password) &&
+      stringContainsUpperCaseChar(form.password) &&
+      stringContainsNumberChar(form.password) &&
+      stringContainsSpecialChar(form.password)
     )
   ) {
     updateFieldStatus(
@@ -162,7 +167,7 @@ function emailCheck() {
   form.email = emailInputElement.value;
   if (form.email.length === 0) {
     updateFieldStatus(emailInputElement, false, "Provide your email");
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+  } else if (!stringIsEmailAddress(form.email)) {
     updateFieldStatus(emailInputElement, false, "Incorrect email");
     alertStatus[5] = false;
   } else {
@@ -180,7 +185,16 @@ function zipCheck() {
   } else if (!(form.zip.length == 6)) {
     updateFieldStatus(zipInputElement, false, "Must be 6 digits");
     alertStatus[6] = false;
-  } else if (!/^[1-9]{4}[A-z]{2}$/.test(form.zip)) {
+  } else if (
+    !(
+      isCharNumber(form.zip[0]) &&
+      isCharNumber(form.zip[1]) &&
+      isCharNumber(form.zip[2]) &&
+      isCharNumber(form.zip[3]) &&
+      isCharLetter(form.zip[4]) &&
+      isCharLetter(form.zip[5])
+    )
+  ) {
     updateFieldStatus(zipInputElement, false, "Incorect zip code ");
     alertStatus[6] = false;
   } else {
@@ -245,4 +259,86 @@ function displayAlertMessage() {
     );
     showBehavioralInfo();
   }
+}
+
+function isCharSpecial(char) {
+  return "!@#$%^&*()_+-={}[]|\\;\"',.?".includes(char);
+}
+
+function isCharUpperCase(char) {
+  return isCharLetter(char) && char == char.toUpperCase();
+}
+
+function isCharLowerCase(char) {
+  return isCharLetter(char) && char == char.toLowerCase();
+}
+
+function isCharNumber(char) {
+  return !isNaN(parseInt(char));
+}
+
+function isCharLetter(char) {
+  return char.toLowerCase() != char.toUpperCase();
+}
+
+function stringContainsSpecialChar(string) {
+  let foundSpecialChar = false;
+  for (const char of string) {
+    if (isCharSpecial(char)) {
+      foundSpecialChar = true;
+      break;
+    }
+  }
+  return foundSpecialChar;
+}
+
+function stringContainsUpperCaseChar(string) {
+  let foundUpperCaseChar = false;
+  for (const char of string) {
+    if (isCharUpperCase(char)) {
+      foundUpperCaseChar = true;
+      break;
+    }
+  }
+  return foundUpperCaseChar;
+}
+
+function stringContainsLowerCaseChar(string) {
+  let foundLowerCaseChar = false;
+  for (const char of string) {
+    if (isCharLowerCase(char)) {
+      foundLowerCaseChar = true;
+      break;
+    }
+  }
+  return foundLowerCaseChar;
+}
+
+function stringContainsNumberChar(string) {
+  let foundNumberChar = false;
+  for (const char of string) {
+    if (isCharNumber(char)) {
+      foundNumberChar = true;
+      break;
+    }
+  }
+  return foundNumberChar;
+}
+
+function stringIsEmailAddress(string) {
+  let atLocation = string.indexOf("@");
+
+  // If string does not contain At sign ("@")
+  // or it is the first character
+  if (atLocation <= 0) return false;
+
+  let stringAfterAt = string.substring(atLocation + 1);
+  let dotLocation = stringAfterAt.indexOf(".");
+
+  // If substring does not contain a dot (".")
+  // or it is the first character
+  if (dotLocation <= 0 || dotLocation === stringAfterAt.length - 1)
+    return false;
+
+  return true;
 }
