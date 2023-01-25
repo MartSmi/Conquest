@@ -126,6 +126,13 @@ function nameCheck() {
   }
 }
 
+function containsOnlyLettersCheck(input){
+  for (let i of input){
+    var unicode = i.charCodeAt(0);
+    console.log(unicode);
+  }
+}
+
 function languageCheck() {
   let languageInputElement = document.getElementById("language");
   form.language = languageInputElement.value;
