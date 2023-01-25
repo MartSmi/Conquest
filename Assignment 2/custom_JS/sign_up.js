@@ -122,19 +122,12 @@ function nameCheck() {
   if (form.name.length === 0) {
     updateFieldStatus(nameInputElement, false, "Provide your name");
     alertStatus[2] = false;
-  } else if (!/^[A-z\s]+$/.test(form.name)) {
+  } else if (!stringContainsLettersOnly) {
     updateFieldStatus(nameInputElement, false, "Can only contain letters");
     alertStatus[2] = false;
   } else {
     updateFieldStatus(nameInputElement, true);
     alertStatus[2] = true;
-  }
-}
-
-function containsOnlyLettersCheck(input){
-  for (let i of input){
-    var unicode = i.charCodeAt(0);
-    console.log(unicode);
   }
 }
 
@@ -280,6 +273,18 @@ function isCharNumber(char) {
 function isCharLetter(char) {
   return char.toLowerCase() != char.toUpperCase();
 }
+
+function stringContainsLettersOnly(string){
+  for(const i of string){
+    if(!isCharLetter(i)){
+      return false;
+    }
+  }
+  return true;
+}
+
+let myname = "Sanjit";
+console.log(stringContainsLettersOnly(myname));
 
 function stringContainsSpecialChar(string) {
   let foundSpecialChar = false;
