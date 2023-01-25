@@ -122,7 +122,7 @@ function nameCheck() {
   if (form.name.length === 0) {
     updateFieldStatus(nameInputElement, false, "Provide your name");
     alertStatus[2] = false;
-  } else if (!stringContainsLettersOnly) {
+  } else if (!stringContainsLettersOnly(form.name)) {
     updateFieldStatus(nameInputElement, false, "Can only contain letters");
     alertStatus[2] = false;
   } else {
@@ -282,9 +282,6 @@ function stringContainsLettersOnly(string){
   }
   return true;
 }
-
-let myname = "Sanjit";
-console.log(stringContainsLettersOnly(myname));
 
 function stringContainsSpecialChar(string) {
   let foundSpecialChar = false;
